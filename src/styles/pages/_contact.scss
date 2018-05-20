@@ -1,0 +1,40 @@
+.contact {
+  position: relative;
+  color: #f7f7f7;
+  background-color: $color-primary;
+  
+  &__content {
+    width: 100%;
+    padding: 0 $l-size;
+    margin: 0 auto;
+    max-width: 60rem;
+    @include respond(tab-land) { max-width: 80rem;}
+  }
+
+  &__details {
+    display: flex;
+    flex-flow: column;
+    font-size: 1.5rem;
+    line-height: 1;
+    @include respond (s-phone) {
+      flex-flow: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__option:first-child { margin-bottom: $s-size; }
+
+  &__social {
+    display: none;
+
+    & > * { cursor: pointer; }
+    
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: space-between;
+      flex: 0 1 18%;
+    }
+    @include respond(tab-land) { flex: 0 1 13%; }
+
+  }
+}

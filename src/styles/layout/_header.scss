@@ -1,0 +1,43 @@
+.header {
+  background-color: $color-primary;
+  padding: $m-size 9.4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(phone) {
+    background-color: $color-white;
+    padding: 0; 
+  }
+
+  &__main-content {
+    @include respond(phone) {
+      flex: 0 1 77%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include respond(xs-tab) { flex: 0 1 70%; } 
+  }
+
+  &__logo-box {
+    height: 2.5rem;
+    @include respond(phone) {
+      margin: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    @include respond(xs-tab) {
+      flex: 1 1 auto;
+      margin: 0 9.4%;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    height: 100%; 
+    z-index: 10000;
+  }
+}
+

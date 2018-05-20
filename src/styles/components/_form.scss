@@ -1,0 +1,61 @@
+.form {
+  margin-top: $xxl-size;
+  display: flex;
+  flex-flow: column;
+
+  &__input-box,
+  &__textarea-box {
+    position: relative;
+    display: flex;
+  }
+
+
+  &__label {
+    font-size: 1.6rem;
+    position: absolute;
+    top:.3rem;
+    left:0;
+    line-height: 1;
+    z-index: 10;
+  }
+
+  &__input {
+    padding-left: 5.3rem;
+    margin-bottom: $xl-size;
+    &--email { padding-left: 6rem;}
+  }
+
+  &__input,
+  &__textarea {
+    flex:1;
+    color: #f7f7f7;
+    background-color: $color-primary;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    font-family: 'Lato';
+    font-size: 1.6rem;
+
+  }
+
+  &__textarea-box { flex-flow: column; }
+  
+  &__textarea {
+    height: 2rem;
+    padding-left: 8rem;
+    -webkit-appearance: none;
+    resize: vertical;
+
+    &:active {
+      margin-top: $l-size;
+    }
+
+    &:focus {
+      height: 4rem;
+      border: 1px solid currentColor;
+      padding-left: 2px;
+      margin-top: $l-size;
+    }
+  }
+}
+

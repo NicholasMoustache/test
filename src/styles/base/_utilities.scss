@@ -1,0 +1,13 @@
+.u-hide-scroll {
+  @media(max-width: 1199px) {
+    overflow-y: hidden;
+  }
+}
+
+.u-rotate-num {
+  @include center-content;
+  font-size: 1.5rem;
+  padding-left: $s-size;
+  transform: rotate(-90deg);
+  width: 2.5rem;
+}

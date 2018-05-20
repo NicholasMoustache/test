@@ -1,0 +1,27 @@
+.project {
+  padding-bottom: $xxl-size;
+  width: 100%; 
+  background-color: $color-tertiary;
+  @include respond (tab-port) {
+    margin: 0;
+    padding: 0 2rem;
+    flex: 0 1 50%; 
+  }
+  
+  // &__img-box {
+  //   width: 100%;
+  //   margin: 0 auto;
+  // }
+  
+  &__img {
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    margin-bottom: $l-size;
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    & > * { margin-bottom: 1.5rem;}
+  }
+}

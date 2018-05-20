@@ -1,0 +1,54 @@
+body {
+  color: #333;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.headline {
+  @include center-content;
+  @include maring-vertical(big);
+  font-size: 2.5rem;
+  line-height: 1;
+  
+
+  &__num {
+    @include center-content;
+    font-size: 1.5rem;
+    padding-left: $s-size;
+    transform: rotate(-90deg);
+    width: 2.5rem;
+  }
+
+  &__text::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: .3rem;
+    margin-top: $s-size;
+    transition: .2s ease-in-out;
+    width: 6rem;
+    @include respond (tab-port) { width:0; }
+  }
+
+  &__text--sidebar::after {
+    width: 100%;
+    background-color: $color-white;
+    @include respond (phone) { background-color: $color-primary; }
+    @include respond (tab-land) { width: 0;}
+
+  }
+
+  &__text:hover::after { 
+    @include respond (tab-port) { width: 7rem;} 
+  }
+  
+  &__text--sidebar:hover::after {
+    @include respond (tab-land) {
+      background-color: $color-white;
+      width: 100%; 
+    } 
+  }
+  
+}
+

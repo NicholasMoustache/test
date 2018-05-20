@@ -1,0 +1,15 @@
+.work {
+  position: relative;
+  background-color: $color-tertiary;
+  padding: 0 $l-size;
+  margin-top: $xl-size;
+  @include respond (xs-tab) { padding: 0 $xxl-size;}
+  
+  &__content {
+    @include respond (tab-port) { 
+      display: flex;
+      justify-content: center;
+      padding-bottom: $xxl-size;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.sidebar {
+  background-color: $color-secondary;
+  width: 100vw;
+  height: 100vh;
+  backface-visibility: hidden;
+  position: fixed;
+  top:-200%;
+  right:0;
+  z-index: 9;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  @include respond(phone) { background-color: $color-tertiary; }
+  @include respond(tab-land) {
+    position: absolute;
+    background-color: $color-primary;
+    transition: .4s ease;
+    width: 32.3%;
+  }
+
+  & > * { margin-right: -17px;}
+
+
+  &--active { top: 0; }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__link {
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 2rem;
+    padding: 2rem 0;
+    margin-bottom: .4rem;
+    display: flex;
+    justify-content: center;
+    @include respond(phone)    { color: $color-primary; }
+    @include respond(tab-land) { color: $color-white;   }
+  }
+
+  &__logo-box {
+    flex: 0 1 20%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: none;
+    @include respond(tab-land) { display: block; }
+  }
+}

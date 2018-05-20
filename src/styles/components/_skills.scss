@@ -1,0 +1,38 @@
+.skills {
+  display: flex;
+  justify-content: space-between;
+  @include respond(phone) { justify-content: space-evenly;}
+  @include respond(tab-port) {
+    flex: 0 1 27%; //20
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  &__col {
+    padding: 0 $l-size;
+    @include respond(s-phone)  { padding: 0 $xl-size;}
+    @include respond(tab-port) { 
+      margin-bottom: $l-size; 
+      padding:0; 
+    }
+  }
+
+  &__title { font-size: 2rem; }
+
+  &__list-group { list-style-type: none; }
+
+  &__list-item {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+
+  &__list-item::after {
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    padding-bottom: 2px;
+    background-color: $color-primary;
+    @include respond(tab-port) { width: 80%; }
+  }
+}

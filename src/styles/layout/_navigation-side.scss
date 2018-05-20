@@ -1,0 +1,65 @@
+.sidenav { display: none; }
+
+@include respond(tab-port) {
+  .sidenav {
+    display: block;
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+
+
+    &__list-group {
+      height: 18rem;
+      width: 5rem;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+
+    &__item { flex: 1 1 25%; }
+
+
+    &__link {
+      height: 100%;
+      color: $color-primary;
+      font-size: 1.3rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    &__link--white { color: #fff; }
+
+
+    
+    &__link--selected {
+      transition: .3s ease;
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
+
+    &__line {
+      transition: .3s ease;
+      background-color: $color-secondary;
+      align-self: center;
+      height: .2rem;
+      width: 2.5rem;
+      align-self: center;
+      padding:0 .2rem;
+    }
+
+    &__line--white { background-color: white; }
+
+  }
+}
+
+
+
+
+
+
+
+
+

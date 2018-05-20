@@ -1,0 +1,71 @@
+
+
+//MEDIA QUERY MANAGER
+
+/*
+    0-600px: Phone
+    600-900px: Tablet portrait
+    900-1200px: Tablet landscape
+    [1200-1800]: is where our normal styles apply
+    1800px + : BIg desktop
+
+
+    $breakepoint argument choices
+    -phone
+    -tab-port
+    -tab-land
+    -big-desktop
+
+    ORDER: Base + typography > general layout + grid > page layout > components
+    1em = 16px;
+*/
+@mixin center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin maring-vertical ($size) {
+  @if $size == big {
+    padding: 4.8rem 0;
+  }
+
+  @if $size == large {
+    padding: 3.2rem 0;
+  }
+
+  @if $size == medium {
+    padding: 2.4rem 0;
+  }
+}
+
+@mixin respond ($breakepoint) {
+
+  @if $breakepoint == xs-phone {
+    @media (min-width: 22.5em) { @content };  //320px
+  }
+
+  @if $breakepoint == s-phone {
+    @media (min-width: 30em) { @content };  //480px
+  }
+
+  @if $breakepoint == phone {
+    @media (min-width: 37.5em) { @content };  //600px
+  }
+
+  @if $breakepoint == xs-tab {
+    @media (min-width: 48em) { @content };  //768px
+  }
+
+  @if $breakepoint == tab-port {
+    @media (min-width: 56.25em ) { @content }; //900
+  }
+
+  @if $breakepoint == tab-land {
+    @media (min-width: 75em ) { @content }; //1200
+  }
+
+  @if $breakepoint == big-desktop  {
+    @media (min-width: 112.5em) { @content }; //1800
+  }
+}

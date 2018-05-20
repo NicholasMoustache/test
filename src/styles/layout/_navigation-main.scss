@@ -1,0 +1,58 @@
+.nav {
+  display: none;
+}
+
+
+@include respond(phone) { //xs tab
+  .nav {
+    display: block;
+    flex: 0 1 70%; //54%
+    @include respond(xs-tab) {
+    flex: 0 1 53%;
+    opacity: 1;
+    transition: .2s ease;
+    backface-visibility: hidden;
+
+    &--hide {
+      opacity:0;
+      visibility: hidden;
+    }
+  }
+
+    &__list {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+    }
+
+
+    &__link:link,
+    &__link:visited {
+      color: $color-primary;
+      font-size: 1.8rem;
+      padding: 2rem 0;
+      display: block;
+      text-decoration: none;
+    }
+
+    &__link:link:hover,
+    &__link:visited:hover {
+      color: $color-secondary;
+    }
+  
+  
+    &__link::before { 
+      background-color: $color-primary;
+      content: "";
+      display: block;
+      height: .2rem;
+      width: 0;
+      transition: .3s ease;
+    }
+  
+    &__link:hover::before {
+      width: 100%;
+    }
+  
+  }
+}

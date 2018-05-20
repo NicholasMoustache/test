@@ -1,0 +1,66 @@
+.hamburger-box {
+  position: relative;
+  width: 3rem;
+  height: 2.5rem;
+  z-index: 10;
+
+  @include respond(xs-tab) {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  width: 3rem;
+  height: 3px;
+  background-color: $color-white;
+  backface-visibility: hidden;
+  transition: all .3s ease-in-out;
+  @include respond(phone) { background-color: $color-primary; }
+
+  &--top { 
+    backface-visibility: hidden;
+    top: 0%;
+
+    &-active {
+      backface-visibility: hidden;
+      top:50%;
+      transform-origin: center;
+      transform: translateY(-50%) rotate(225deg);
+      @include respond(tab-land) { background-color: $color-white; }
+
+    }
+  }
+
+  &--middle {
+    backface-visibility: hidden;
+    opacity: 1;
+    top: 50%;
+    transform: translateY((-50%));
+    transition: .1s ease .2s;
+
+    &-active {
+      backface-visibility: hidden;
+      opacity: 0;  transform:rotate(-45deg);
+      @include respond(tab-land) { background-color: $color-white; }
+
+    }
+  }
+
+  &--bottom { 
+    backface-visibility: hidden;
+    bottom: 0%;
+
+    &-active {
+      backface-visibility: hidden;
+      transform-origin: center;
+      bottom:50%;
+      transform: translateY(50%) rotate(-225deg);
+      @include respond(tab-land) { background-color: $color-white; }
+
+    }
+  }
+}

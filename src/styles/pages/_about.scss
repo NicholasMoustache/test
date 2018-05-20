@@ -1,0 +1,52 @@
+.about {
+  position: relative;
+  background-color: $color-secondary;
+  display: flex;
+  flex-flow: column;
+  
+  &__content {
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__description-box {
+    font-size: 1.6rem;
+    padding: 0 $l-size;
+
+    @include respond (s-phone) { 
+      width: 100%;
+      padding: 0 $xxl-size;
+    }
+    @include respond(tab-port) {
+      padding:0;
+      margin: 0;
+      flex: 0 1 27%;
+    }
+  }
+
+  &__title { margin-bottom: $s-size; }
+
+  &__description {
+    font-size: 1.4rem;
+    word-break: keep-all;
+    margin-bottom: 1rem;
+  }
+
+  &__img-box {
+    @include center-content;
+    @include maring-vertical(big);
+    
+    @include respond(tab-port) { padding: 0;}
+    // @include respond(tab-port) { margin: 0 $l-size; }
+  }
+
+  &__download {
+    @include center-content;
+    @include maring-vertical(big);
+  }
+
+}
+
+

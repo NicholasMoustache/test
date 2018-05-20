@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700,900" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>Portfolio Mikolaj Wasik</title>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <header id="header" class="header">
+            <picture class="header__logo-box" >
+                <source 
+                    class="header__logo"
+                    srcset="./assets/images/logo.png" 
+                    media="(min-width: 600px)"
+                />
+                <img 
+                    id="logo"
+                    class="header__logo"
+                    srcset="./assets/images/logo_white.png" 
+                    src="./assets/images/logo_white.png"
+                    alt="Portfolio Logo"> 
+            </picture>
+            <div class="header__main-content">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#work" class="nav__link">Work</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hamburger-box">
+                    <div class="test">
+                        <div class="hamburger hamburger--top"></div>
+                        <div class="hamburger hamburger--middle"></div>
+                        <div class="hamburger hamburger--bottom"></div>
+                    </div>
+                </div>  
+            </div>
+        </header>
+        <section class="sidebar">
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="#header" class="sidebar__link">
+                        <span class="headline__num">01</span>
+                        <span class="headline__text headline__text--sidebar">Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item"></li>
+                    <a href="#work" class="sidebar__link">
+                        <span class="headline__num">02</span>
+                        <span class="headline__text headline__text--sidebar">Work</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#about" class="sidebar__link">
+                        <span class="headline__num">03</span>
+                        <span class="headline__text headline__text--sidebar">About</span>  
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#contact" class="sidebar__link">
+                        <span class="headline__num">04</span>
+                        <span class="headline__text headline__text--sidebar">Contact</span> 
+                    </a>
+                </li>
+            </ul>
+            <figure class="sidebar__logo-box">
+                <img src="./assets/images/logo_white_vertical.png" alt="logo" class="sidebar__logo">
+            </figure>
+        </section>
+        <main class="main">
+            <section id="home" class="home">
+                <div class="home__intro">
+                    <h1 class="home__title">Hello,
+                        <img class="home__icon" src="./assets/images/zygzak.png" alt="Intro Icon">
+                    </h1>
+                    <h1 class="home__title">I'm Mikolaj Wasik</h1>
+                    <h2 class="home__subtitle">Frontend Developer 
+                        <img class="home__icon home__icon--second" src="./assets/images/zygzak.png" alt="Intro Icon">
+                    </h2>  
+                </div>
+                <div class="home__img-box">
+                    <picture>
+                        <source 
+                            srcset="./assets/images/mw-large.png" 
+                            media="(min-width: 768px)"/>
+  
+                        <img 
+                            class="home__img" 
+                            srcset="./assets/images/mw-smaller.png"
+                            src="./assets/images/mw-smaller.png"  
+                            alt="Home Main Image" >   
+                    </picture>
+                </div>
+                <nav class="sidenav sidenav--first">
+                        <ul class="sidenav__list-group">
+                            <li class="sidenav__item">
+                                <a href="#header"  class="sidenav__link sidenav__link--selected sidenav__link--current">
+                                    01<div class="sidenav__line"></div>
+                                </a>
+                            </li>
+                            <li class="sidenav__item">
+                                <a href="#work"  class="sidenav__link ">
+                                    02<div></div>
+                                </a>
+                            </li>
+                            <li class="sidenav__item">
+                                <a href="#about" class="sidenav__link">
+                                    03<div></div>
+                                </a>
+                            </li>
+                            <li class="sidenav__item">
+                                <a href="#contact" class="sidenav__link">
+                                    04<div></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+            </section>
+            <section id="work" class="work">
+                <h1 class="headline">
+                    <span class="headline__num">02</span>
+                    <span class="headline__text">Recent Work</span>
+                </h1>
+                <div class="work__content">
+                    <div class="project">
+                        <figure class="project__img-box">
+                            <img class="project__img" src="./assets/images/budget-prev-1.jpg" alt="Project Image" >
+                            <figcaption class="project__info">
+                                <p class="project__title"><strong>Title:</strong> Budget Application</p>
+                                <p class="project__details"><strong>Technologies:</strong> React Redux CSS3/SCSS</p>
+                                <p class="project__description"><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in, molestias sunt dicta dignissimos officia nisi sapiente velit corporis dolore!</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="project">
+                        <figure class="project__img-box">
+                            <img class="project__img" src="./assets/images/budget-prev-1.jpg" alt="Project Image" >   
+                            <figcaption class="project__info">
+                                <p class="project__title"><strong>Title:</strong> Budget Application</p>
+                                <p class="project__details"><strong>Technologies:</strong> React Redux CSS3/SCSS</p>
+                                <p class="project__description"><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in, molestias sunt dicta dignissimos officia nisi sapiente velit corporis dolore!</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <nav class="sidenav">
+                    <ul class="sidenav__list-group">
+                        <li class="sidenav__item">
+                            <a href="#header" class="sidenav__link">
+                                01<div></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#work"  class="sidenav__link sidenav__link--selected sidenav__link--current">
+                                02<div class="sidenav__line"></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#about" class="sidenav__link">
+                                03<div></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#contact" class="sidenav__link">
+                                04<div></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="about" class="about">
+                <h1 class="headline">
+                    <span class="headline__num">03</span>
+                    <span class="headline__text headline__text--about">About</span> 
+                </h1>
+                <div class="about__content">
+                    <div class="about__description-box">
+                        <h2 class="about__title">Hello, I'm Mikolaj Wasik</h2>
+                        <p class="about__description">I’ve been learning Front End technologies for one year. I started with basics and very soon realized that making even the simple website is giving me a lot of fun. For last 12 months, I’ve subordinated everything to learn to programme on my own. 
+                        <p class="about__description">Most of the time I’ve spent on VanillaJS and deeper understanding of how things work under the hood. The beginning of 2018 was a time when I felt quite comfortable with JS and started to learn to React with Redux which is the technology/library I like the most.</p> 
+                        <p class="about__description">I would like to continue my development and get an opportunity to work with experienced developers and real-world projects. </p>
+                    </div>
+                    <figure class="about__img-box">
+                        <img src="./assets/images/foto.png" alt="My Photo" class="about__img">
+                    </figure>
+                    <div class="skills">
+                        <div class="skills__col">
+                            <h1 class="skills__title">Skills</h1>
+                            <ul class="skills__list-group">
+                                <li class="skills__list-item">HTML5</li>
+                                <li class="skills__list-item">CSS3 | SCSS</li>
+                                <li class="skills__list-item">JavaScript | ES6</li>
+                                <li class="skills__list-item">ReactJS</li>
+                                <li class="skills__list-item">Redux</li>
+                            </ul>
+                        </div>
+                        <div class="skills__col">
+                            <h1 class="skills__title">Familiarity</h1>
+                            <ul class="skills__list-group">
+                                <li class="skills__list-item">Webpack</li>
+                                <li class="skills__list-item">jQuery</li>
+                                <li class="skills__list-item">Git</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__download">
+                    <a href="#" class="btn btn--download">Download my CV</a>
+                </div>   
+                <nav class="sidenav">
+                    <ul class="sidenav__list-group">
+                        <li class="sidenav__item">
+                            <a href="#header" class="sidenav__link ">
+                                01<div class="sidenav__line--white"></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#work" class="sidenav__link">
+                                02<div class="sidenav__line--white"></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#about" class="sidenav__link sidenav__link--selected sidenav__link--current">
+                                03<div class="sidenav__line--white sidenav__line"></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#contact" class="sidenav__link">
+                                04<div class="sidenav__line--white"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="contact" class="contact">
+                <h1 class="headline">
+                    <span class="headline__num">04</span>
+                    <span class="headline__text">Get in touch</span> 
+                </h1>
+                <div class="contact__content">
+                    <div class="contact__details">
+                        <p class="contact__option">
+                            <strong>ph:</strong> +48 730 089 927
+                        </p>
+                        <p class="contact__option">
+                            <strong>e:</strong> wasikmikolaj@gmail.com
+                        </p>
+                        <div class="contact__social">
+                            <i class="fab fa-github"></i>
+                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </div>
+                    <form action="#" class="form">
+                        <div class='form__input-box'>
+                            <label class="form__label" for="name">Name:</label>
+                            <input class="form__input" id="name"type="text" >
+                        </div>
+                        <div class="form__input-box">
+                            <label class="form__label" for="mail">E-mail:</label>
+                            <input class="form__input form__input--email" id="mail" type="email" >
+                        </div>
+                        <div class="form__textarea-box">
+                            <label class="form__label" for="message">Message:</label>
+                            <textarea class="form__textarea"></textarea>
+                        </div>
+                        <button class="btn btn--submit">Submit</button>
+                    </form>
+                </div>
+                <nav class="sidenav">
+                    <ul class="sidenav__list-group">
+                        <li class="sidenav__item">
+                            <a href="#header" class="sidenav__link sidenav__link--white ">
+                                01<div class="sidenav__line--white"></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#work"  class="sidenav__link sidenav__link--white">
+                                02<div class="sidenav__line--white" ></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a href="#about" class="sidenav__link sidenav__link--white ">
+                                03<div class="sidenav__line--white "></div>
+                            </a>
+                        </li>
+                        <li class="sidenav__item ">
+                            <a href="#contact" class="sidenav__link sidenav__link--selected sidenav__link--current sidenav__link--white ">
+                                04<div class="sidenav__line--white sidenav__line"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__contact">
+                <p class="footer__phone">+48 730 089 927</p>
+                <div class="footer__line"></div>
+                <p class="footer__email">wasikmikolaj@gmail.com</p>
+                <figure class="footer__logo-box">
+                    <img src="./assets/images/logo.png" alt="logo" class="footer__logo">
+                </figure>
+            </div>
+            <h1 class="footer__copyright">&copy; 2018 Mikołaj Wąsik ALL RIGHTS RESERVED</h1>
+        </footer>
+    </body>
+</html>

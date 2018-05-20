@@ -1,0 +1,28 @@
+.btn {
+  border-radius: .3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: .8px;
+  outline: none;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  
+  &--download {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+  }
+
+
+  &--submit {
+    align-self: flex-end;
+    background-color: $color-primary;
+    border: 2px solid currentColor;
+    color: #f7f7f7;
+    margin: $xxl-size 0;
+  }
+}

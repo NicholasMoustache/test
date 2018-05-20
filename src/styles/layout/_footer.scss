@@ -1,0 +1,69 @@
+.footer {
+  @include maring-vertical(medium);
+  @include respond (phone) { @include maring-vertical(big); }
+
+  &__contact {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 1.2rem;
+    @include respond (xs-phone) { flex-flow: row wrap; }
+  
+    & > * {
+      font-weight: 500;
+      font-size: 1.4rem;
+      font-family: inherit;
+    }
+  }
+
+  &__line {
+    width: 30%;
+    background-color: $color-primary;
+    height: 2px;
+    margin: 1rem 0;
+    
+    @include respond(s-phone) { 
+      flex: 0 1 15%;
+      margin: 0;  
+    }
+  }
+
+  &__phone,
+  &__email { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    @include respond(s-phone) {
+      flex: 0 1 40.5%; 
+      padding: 0 .5rem;
+      justify-content: flex-end;
+    }
+    @include respond(phone) { flex: 0 1 40%; }
+    @include respond(xs-tab) { padding: 0 2rem; }
+  }
+
+  &__email { @include respond(s-phone) { justify-content: flex-start; } }
+
+  &__logo-box {
+    flex: 0 1 20%;
+    display: flex;
+    justify-content: center;
+    margin: $m-size 0;
+    
+    @include respond(phone) { flex: 0 1 20%;}
+    @include respond(xs-tab) { margin: $l-size; }
+  }
+
+  &__logo {
+    display: block;
+    height: 2.5rem;
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0 .5rem;
+  }
+}
