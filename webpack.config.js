@@ -36,6 +36,8 @@ module.exports = {
                   includePaths: ["absolute/path/a", "absolute/path/b"]
               }
             }
+        }, {
+          loader: 'postcss-loader'
         }]
     }, {
       test: /\.(gif|png|jpe?g|svg)$/i,
